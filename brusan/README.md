@@ -5,6 +5,7 @@ The main program is solve_equilibrium: to compute equilibrium type solve_equilib
 command window and press enter. The file will then produce two figures:
 
 -Figure 1 shows important equilibrium quantities such as q, psi, drift and volatility of eta.
+
 -Figure 2 shows expert and household utility within the model.
 
 To compute the equilibrium under a different set of parameters change line 14 of
