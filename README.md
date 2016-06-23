@@ -1,2 +1,2 @@
-# mfm-dev
-Development
+# MFM community development code
+
