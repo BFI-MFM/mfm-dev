@@ -1,7 +1,5 @@
 %vz, 2016
 %Brock-Mirman model with full depreciation
-clear all;close all;
-run('../set_path_mfm');
 tic;
 %setup parameters
 alpha = 1./3; %capital share
