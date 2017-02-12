@@ -28,6 +28,7 @@ ylabel('$k^\prime(k)$', 'interpreter', 'latex', 'fontsize',12, 'Color', 'blue');
 title('Exact and Numerical Solutions', 'interpreter', 'latex', 'fontsize',12, 'Color', 'blue');
 hold on
 plot(k_pol0, '--r', 'LineWidth', 3);
+legend('Exact', 'Numerical', 'Location', 'best');
 hold off
 save('bm1972.mat')
 toc;
