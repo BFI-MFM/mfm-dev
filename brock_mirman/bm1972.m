@@ -1,6 +1,7 @@
 %vz, 2016
-clear all; close all;
-set_path_tensor
+%Brock-Mirman model with full depreciation
+clear all;close all;
+run('../set_path_mfm');
 tic;
 %setup parameters
 alpha = 1./3; %capital share
@@ -15,7 +16,7 @@ while (tol_val > tol_val_min)
     kfun= chebfun(@(k) kfun0((kfun0(k))),domain_k, 'eps', tol_val_min, 'vectorize','splitting','on');
     kprime = chebfun(@(k) valfun0(k).^(1-alpha).*kfun(k),domain_k, 'eps', tol_val_min, 'vectorize','splitting','on');
     
-    dfun = chebfun(@(k) (kx.^alpha+1./(alpha.*beta).*kprime(k))...
+    dfun = chebfun(@(k) (k.^alpha+1./(alpha.*beta).*kprime(k))...
         .*alpha.*beta./(1+alpha*beta),domain_k, 'eps', tol_val_min, 'vectorize','splitting','on');
     tol_val = abs(max(dfun)-max(kfun0))./abs(max(kfun0));
     kfun0 = dfun;
