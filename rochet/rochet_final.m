@@ -82,4 +82,5 @@ l.boundary_type ='reflecting';
 r.boundary_type ='reflecting';
 m_name ='interest rate';
 sh_type ='state space: bank equity';
+save('rochet.mat')
 toc;
