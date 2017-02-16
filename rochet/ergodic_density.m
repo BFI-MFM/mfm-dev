@@ -7,4 +7,4 @@ scale = 1/(sum(g_int./sigmacheb(xx(1:end-1)).^2)*(xx(2)-xx(1)));
 ergodic_d = g_int./sigmacheb.^2*scale;
 
 plot(xx(2:end-1),ergodic_d (xx(2:end-1)),'linewidth', 2 );
-xlabel('X');title( 'ergodic density'));
+xlabel('X');title( 'ergodic density');
