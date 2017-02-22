@@ -5,7 +5,7 @@ tic;
 alpha = 1./3; %capital share
 beta = 0.97; %discount rate
 
-tol_val =1000; tol_val_k= 1e-9; tol_cheb=2e-3;%accuracy
+tol_val =1000; tol_val_k= 1e-4; tol_cheb=1e-4;%accuracy
 domain_k = [0 3];
 kfun = chebfun(@(k) k, domain_k);
 k_pol0 =  0.1.*kfun.^alpha;
@@ -30,8 +30,9 @@ hold on
 plot(k_pol0, '--r', 'LineWidth', 3);
 legend('Exact', 'Numerical', 'Location', 'best');
 hold off
+xx = linspace(domain_k(1), domain_k(end),200);
 figure
-plot(alpha*beta*kfun.^alpha-k_pol0, 'LineWidth', 2);
+plot(xx,alpha*beta.*kfun(xx).^alpha-k_pol0(xx), 'LineWidth', 2);
 xlabel('$k$', 'interpreter', 'latex', 'fontsize',12, 'Color', 'blue');
 ylabel('$k^\prime(k)$', 'interpreter', 'latex', 'fontsize',12, 'Color', 'blue');
 title('Numerical Solutions error', 'interpreter', 'latex', 'fontsize',12, 'Color', 'blue');
