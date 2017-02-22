@@ -1,4 +1,4 @@
-load baseline.mat;
+load baselinesolution.mat;
 
 chebfunpref.setDefaults('chebfuneps',1e-6);
 domain_x = [0.00001, 1];
