@@ -5,7 +5,7 @@ tic;
 alpha = 1./3; %capital share
 beta = 0.97; %discount rate
 
-tol_val =1000; tol_val_k= 1e-5; tol_cheb=1e-5;%accuracy
+tol_val =1000; tol_val_k= 1e-9; tol_cheb=1e-9;%accuracy
 domain_k = [0.1 3];
 kfun = chebfun(@(k) k, domain_k);
 k_pol0 =  0.1.*kfun.^alpha;
