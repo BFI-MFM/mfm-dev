@@ -30,5 +30,10 @@ hold on
 plot(k_pol0, '--r', 'LineWidth', 3);
 legend('Exact', 'Numerical', 'Location', 'best');
 hold off
+figure
+plot(alpha*beta*kfun.^alpha-k_pol0, 'LineWidth', 2);
+xlabel('$k$', 'interpreter', 'latex', 'fontsize',12, 'Color', 'blue');
+ylabel('$k^\prime(k)$', 'interpreter', 'latex', 'fontsize',12, 'Color', 'blue');
+title('Numerical Solutions error', 'interpreter', 'latex', 'fontsize',12, 'Color', 'blue');
 save('bm1972.mat')
 toc;
