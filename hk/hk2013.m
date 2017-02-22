@@ -14,8 +14,8 @@ clearvars -except domain_x mucheb sigmacheb xi g sigma rho gama
 betacheb = chebfun(mucheb.*xi+g -sigma^2/2, domain_x, 'splitting', 'on'); 
 alphacheb = chebfun(sigmacheb.*xi+sigma, domain_x,'splitting', 'on'); 
 
-betascheb =  -rho - gama.*betacheb; 
-alphascheb = -gama*alphacheb; 
+betascheb_sdf =  -rho - gama.*betacheb; 
+alphascheb_sdf = -gama*alphacheb; 
 
 l.boundary_type = 'natural';
 r.boundary_type = 'natural';
