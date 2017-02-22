@@ -34,7 +34,7 @@ xx = linspace(domain_k(1), domain_k(end),200);
 figure
 plot(xx,(alpha*beta.*kfun(xx).^alpha-k_pol0(xx))./(alpha*beta.*kfun(xx).^alpha)*100, 'LineWidth', 2);
 xlabel('$k$', 'interpreter', 'latex', 'fontsize',12, 'Color', 'blue');
-ylabel('($k^\prime(k)_{exact}-k^\prime(k)_{num}$)/k^\prime(k)_{exact}*100', 'interpreter', 'latex', 'fontsize',12, 'Color', 'blue');
+ylabel('($k^\prime(k)_{exact}-k^\prime(k)_{num})/k^\prime(k)_{exact}*100$', 'interpreter', 'latex', 'fontsize',12, 'Color', 'blue');
 title('Numerical solution error', 'interpreter', 'latex', 'fontsize',12, 'Color', 'blue');
 save('bm1972.mat')
 toc;
