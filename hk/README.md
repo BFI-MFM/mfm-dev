@@ -1,0 +1,7 @@
+"Intermediary asset pricing" by
+Zhiguo He and  Arvind Krishnamurthy.
+
+
+      Solvingmodelmain_aeaweb.m is the code to solve for the
+equilibrium price/dividend ratio, and plotting the basic model
+implied functions. It uses the ode function delefully2hw15s.m.
