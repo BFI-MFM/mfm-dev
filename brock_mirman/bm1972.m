@@ -11,7 +11,7 @@ kfun = chebfun(@(k) k, domain_k);
 k_pol0 =  0.1.*kfun.^alpha;
 i = 1;
 while (tol_val > tol_val_k)
-    k_pol= chebfun(@(k) k_pol0((k_pol0(k))),domain_k, 'eps', tol_val_min, 'vectorize','splitting','on');
+    k_pol= chebfun(@(k) k_pol0((k_pol0(k))),domain_k, 'eps', tol_cheb, 'vectorize','splitting','on');
     kprime = chebfun(@(k) k_pol0(k).^(1-alpha).*k_pol(k),domain_k, 'eps', tol_cheb, 'vectorize','splitting','on');
     
     dfun = chebfun(@(k) (k.^alpha+1./(alpha.*beta).*kprime(k))...
