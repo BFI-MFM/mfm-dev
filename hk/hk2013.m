@@ -19,8 +19,7 @@ alphacheb_sdf = -gama*alphacheb;
 
 l.boundary_type = 'natural';
 r.boundary_type = 'natural';
-m_name ='consumption';
-sh_type1 ='shock-exposure elasticity, state space: experts wealth share';
-sh_type2 ='shock-price elasticity, state space: experts wealth share';
+m_name ='specialist consumption';
+sh_type =' state space: experts wealth share';
 
 save('hk2013.mat')
