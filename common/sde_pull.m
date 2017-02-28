@@ -8,6 +8,6 @@ gg = linspace(domain_x(1), domain_x(2),200);
 pullval = feval(mucheb,gg)./feval(sigmacheb,gg)-feval(diff(sigmacheb)./2,gg);
 
 
-figure; plot(pullval,LW, lw);   
+figure; plot(gg,pullval,LW, lw);   
 xlabel('X', FS,16)
 ylabel('pull',FS,16);
