@@ -60,5 +60,5 @@ N.init = [chebfun(1, [-pi pi]);4];
 [u2,omega] = N\0;
 disp('omega');disp(omega);
 plot(u2, LW, 1.6); 
-legend('initial guess=sin( \omega x /\omega)','initial guess = 1','Location', 'best');hold off;
+legend('initial guess=sin( \omega x /\pi)','initial guess = 1','Location', 'best');hold off;
 toc;
