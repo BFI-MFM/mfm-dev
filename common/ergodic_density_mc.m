@@ -30,20 +30,20 @@ for t = 2 : T
         %Dirichlet - killing
         X(:,t) = Xtemp;
     elseif strcmp(l.boundary_type, 'reflecting')
-        Xtemp(Xtemp>d(1)) = 2*d(1) - Xtemp(Xtemp>d(1));
+        %Xtemp(Xtemp>d(1)) = 2*d(1) - Xtemp(Xtemp>d(1));
         X(:,t) = Xtemp;
     end
     
     % right boundary
-        if strcmp(r.boundary_type,'natural')
+    if strcmp(r.boundary_type,'natural')
         %Neumann - natural
-            Xtemp(Xtemp>d(2)) = d(2);
-            X(:,t) = Xtemp;
-        elseif strcmp(r.boundary_type,'killing')
-            X(:,t) = Xtemp;
-          elseif strcmp(r.boundary_type, 'reflecting')
-            Xtemp(Xtemp>d(2)) = 2*d(2) - Xtemp(Xtemp>d(2));
-            X(:,t) = Xtemp;
+        Xtemp(Xtemp>d(2)) = d(2);
+        X(:,t) = Xtemp;
+    elseif strcmp(r.boundary_type,'killing')
+        X(:,t) = Xtemp;
+    elseif strcmp(r.boundary_type, 'reflecting')
+        %Xtemp(Xtemp>d(2)) = 2*d(2) - Xtemp(Xtemp>d(2));
+        X(:,t) = Xtemp;
     end
 end
 
