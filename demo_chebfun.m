@@ -41,7 +41,6 @@ plot3(r(:,1),r(:,2),f(r(:,1),r(:,2)),'k.','markersize',20)
 zlim([0 4]), hold off, colormap(winter);
 toc;
 
-
 disp('BVP systems with unknown parameters');
 disp('the scalar 2D function f(x,y) is represented by a chebfun2 object');
 disp('a gradient of a scalar function f(x,y) is a chebfun function');
@@ -50,15 +49,15 @@ disp('Press any key to continue...') ;
 pause;
 tic;
 N = chebop(@(x, u , omega) diff(u,2) - u - sin(omega.*x/pi), [-pi pi]);
-N.init = [chebfun('sin(x)', [-pi pi]);4];
-N.lbc = @(u,T) u - 1;
-N.rbc = @(u,T) [u - 1; diff(u) - 1];
-[u,omega] = N\0;
+N.init = [chebfun(@(x) sin(omega*x/pi), [-pi,pi]);2];
+N.lbc = @(u,omega) u - 1;
+N.rbc = @(u,omega) [u - 1; diff(u) - 1];
+[u1,omega] = N\0;
 disp('omega');disp(omega);
-plot(u, LW, 1.6); hold on;
+plot(u1, LW, 1.6); hold on;
 N.init = [chebfun(1, [-pi pi]);4];
-[u,omega] = N\0;
+[u2,omega] = N\0;
 disp('omega');disp(omega);
-plot(u, LW, 1.6); 
-legend('initial guess=sin(x)','initial guess = 1','Location', 'best');hold off;
+plot(u2, LW, 1.6); 
+legend('initial guess$=sin( \omega x /\omega$)','initial guess = 1','Location', 'best');hold off;
 toc;
