@@ -30,6 +30,7 @@ for t = 2 : T
         %Dirichlet - killing
         X(:,t) = Xtemp;
     elseif strcmp(l.boundary_type, 'reflecting')
+        Xtemp(Xtemp<d(1)) = d(1);
         %Xtemp(Xtemp>d(1)) = 2*d(1) - Xtemp(Xtemp>d(1));
         X(:,t) = Xtemp;
     end
@@ -43,6 +44,7 @@ for t = 2 : T
         X(:,t) = Xtemp;
     elseif strcmp(r.boundary_type, 'reflecting')
         %Xtemp(Xtemp>d(2)) = 2*d(2) - Xtemp(Xtemp>d(2));
+         Xtemp(Xtemp>d(2)) = d(2);
         X(:,t) = Xtemp;
     end
 end
