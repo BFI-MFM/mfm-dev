@@ -6,11 +6,11 @@ load (model_name);
 
 d = [domain_x(1), domain_x(2)];
 
-T =5000;
-T_stat = 4900;
+T =10000;
+T_stat = 9900;
 dt = 0.1;
 dist_percentile =[0.2500 0.5000 0.7500 ];
-N=10000;
+N=20000;
 
 X = zeros(N,T);
 X(:,1) = linspace(d(1),d(2),N);
