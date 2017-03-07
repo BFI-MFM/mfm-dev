@@ -4,3 +4,6 @@
 [submodule "TT-Toolbox"]
 	path = TT-Toolbox
 	url = https://github.com/oseledets/TT-Toolbox.git
+[submodule "sglib"]
+	path = sglib
+	url = https://github.com/ezander/sglib.git
