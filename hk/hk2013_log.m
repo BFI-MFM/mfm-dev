@@ -1,7 +1,7 @@
 load baselinesolution_log.mat;
 
 chebfunpref.setDefaults('chebfuneps',1e-4);
-domain_x = [0.001, 1];
+domain_x = [0.0001, 1];
 mucheb = polyfit((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),miux(2:totallength-x),17,domain(domain_x));
 sigmacheb = polyfit((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),sigmax(2:totallength-x),17,domain(domain_x));
 %price_dividend = polyfit((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),F(2:totallength-x),17,domain(domain_x));
@@ -32,7 +32,7 @@ alphacheb_sdf = -gama*alphacheb;
 
 l.boundary_type = 'reflecting';
 r.boundary_type = 'reflecting';
-m_name ='specialist consumption';
+m_name ='expert consumption';
 sh_type =' state space: experts wealth share';
 
 save('hk2013_log.mat')
