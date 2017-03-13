@@ -1,4 +1,9 @@
 function [sh_el, sh_el2, pr_el, pr_el2] = chebel(model_name)
+%vz: 03/13/2017 to compute DVD by using HJB PDE
+%sh_el - shock elasticty of the first kind
+%sh_el2 - shock elasticty of the second kind
+%pr_el - price elasticty of the first kind
+%pr_el2 - price elasticty of the second kind
 
 load(model_name);
 disp(model_name);
