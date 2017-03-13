@@ -10,7 +10,7 @@ disp(model_name);
 
 aa1 = chebfun(@(x) feval(1/2.*sigmacheb.^2,x), domain_x, 'splitting', 'on', 'vectorize','eps',1e-4);
 bb1 = chebfun(@(x) feval(mucheb+sigmacheb.*alphacheb,x), domain_x,'splitting', 'on', 'vectorize','eps',1e-4);
-cc1 = chebfun(@(x) feval(betacheb+alphacheb.^2./2,x), domain_x, 'splitting', 'on', 'vectorize,'eps',1e-4);
+cc1 = chebfun(@(x) feval(betacheb+alphacheb.^2./2,x), domain_x, 'splitting', 'on', 'vectorize','eps',1e-4);
 
 alphacheb_val = alphacheb + alphacheb_sdf;
 betacheb_val = betacheb + betacheb_sdf;
