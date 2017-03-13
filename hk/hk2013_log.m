@@ -1,6 +1,6 @@
 load baselinesolution_log.mat;
 
-chebfunpref.setDefaults('chebfuneps',1e-4);
+chebfunpref.setDefaults('chebfuneps',1e-6);
 domain_x = [0.00001, 1];
 mucheb = polyfit((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),miux(2:totallength-x),17,domain(domain_x));
 sigmacheb = polyfit((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),sigmax(2:totallength-x),17,domain(domain_x));
@@ -33,8 +33,8 @@ alphacheb = chebfun(sigmacheb.*xi+sigma, domain_x,'splitting', 'on');
 betacheb_sdf =  -rho - gama.*betacheb; 
 alphacheb_sdf = -gama*alphacheb; 
 
-l.boundary_type = 'reflecting';
-r.boundary_type = 'reflecting';
+l.boundary_type = 'natural';
+r.boundary_type = 'natural';
 m_name ='expert consumption';
 sh_type =' state space: experts wealth share';
 
