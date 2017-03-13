@@ -12,17 +12,17 @@ w =  1+l-rho*(1-xfun).*price_dividend;
 xi=rho.*price_dividend./w;
 %xi =  -rho*(diff(price_dividend,1).*(1-xfun)-price_dividend)./w;
 
-figure(1);
-plot((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),miux(2:totallength-x));
-hold on;
-plot((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),...
-    feval(mucheb,(F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),miux(2:totallength-x)));
-
-figure(2);
-plot((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),miux(2:totallength-x));
-hold on;
-plot((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),...
-    feval(mucheb,(F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),sigmax(2:totallength-x)));
+% figure(1);
+% plot((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),miux(2:totallength-x));
+% hold on;
+% plot((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),...
+%     feval(mucheb,(F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),miux(2:totallength-x)));
+% 
+% figure(2);
+% plot((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),miux(2:totallength-x));
+% hold on;
+% plot((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),...
+%     feval(mucheb,(F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),sigmax(2:totallength-x)));
 
 
 clearvars -except domain_x mucheb sigmacheb xi g sigma rho gama
