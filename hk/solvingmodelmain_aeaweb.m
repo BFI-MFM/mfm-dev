@@ -4,10 +4,13 @@ global thetass rhoh m f sigmasqr gama g alpha lambda rho l
 
 g=0.02;rhoh=0.04;rho=rhoh;%rho and rhoh are the same
 l=1.84;gama=2; sigma=0.09;m=4;lambda=0.6;
-
+%vz  sync with BS log
+gama = 1.0000001;
+rhoh = 0.06;
 sigmasqr=sigma^2;
 f=0.0; % f is proportional management fee paid by households. The final version we set f=0, but we investigated a version with positive f.   
 sigmahatsqr=sigmasqr;
+;rho=rhoh;%rho and rhoh are the same
 
 aaa=rho+g*(gama-1)+0.5*sigmasqr*gama*(1-gama)-gama*rhoh*l/(1+l);
 thetass=m/(1-lambda+m);
@@ -164,6 +167,6 @@ plot(xx(2:totallength-500),sigmax(2:totallength-500));
 xlabel('w/P: scaled specialist wealth x')
 title('Diffusion of x: \sigma_x')
 
-save('baselinesolution.mat');
+save('baselinesolution_log.mat');
 
 
