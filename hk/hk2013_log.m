@@ -1,7 +1,7 @@
 load baselinesolution_log.mat;
 
 chebfunpref.setDefaults('chebfuneps',1e-4);
-domain_x = [0.0, 1];
+domain_x = [0.00001, 1];
 mucheb = polyfit((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),miux(2:totallength-x),17,domain(domain_x));
 sigmacheb = polyfit((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),sigmax(2:totallength-x),17,domain(domain_x));
 %price_dividend = polyfit((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),F(2:totallength-x),17,domain(domain_x));
