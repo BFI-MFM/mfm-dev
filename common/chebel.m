@@ -3,15 +3,15 @@ function [sh_el, sh_el2, pr_el, pr_el2] = chebel(model_name)
 load(model_name);
 disp(model_name);
 
-aa1 = chebfun(@(x) feval(1/2.*sigmacheb.^2,x), domain_x, 'splitting', 'on');
-bb1 = chebfun(@(x) feval(mucheb+sigmacheb.*alphacheb,x), domain_x,'splitting', 'on');
-cc1 = chebfun(@(x) feval(betacheb+alphacheb.^2./2,x), domain_x, 'splitting', 'on');
+aa1 = chebfun(@(x) feval(1/2.*sigmacheb.^2,x), domain_x, 'splitting', 'on', 'vectorize','eps',1e-6);
+bb1 = chebfun(@(x) feval(mucheb+sigmacheb.*alphacheb,x), domain_x,'splitting', 'on', 'vectorize','eps',1e-6);
+cc1 = chebfun(@(x) feval(betacheb+alphacheb.^2./2,x), domain_x, 'splitting', 'on', 'vectorize','eps',1e-6);
 
 alphacheb_val = alphacheb + alphacheb_sdf;
 betacheb_val = betacheb + betacheb_sdf;
-aa2 = chebfun(@(x) feval(1/2.*sigmacheb.^2,x), domain_x, 'splitting', 'on');
-bb2 = chebfun(@(x) feval(mucheb+sigmacheb.*alphacheb_val,x), domain_x,'splitting', 'on');
-cc2 = chebfun(@(x) feval(betacheb_val+alphacheb_val.^2./2,x), domain_x, 'splitting', 'on');
+aa2 = chebfun(@(x) feval(1/2.*sigmacheb.^2,x), domain_x, 'splitting', 'on', 'vectorize','eps',1e-6);
+bb2 = chebfun(@(x) feval(mucheb+sigmacheb.*alphacheb_val,x), domain_x,'splitting', 'on', 'vectorize','eps',1e-6);
+cc2 = chebfun(@(x) feval(betacheb_val+alphacheb_val.^2./2,x), domain_x, 'splitting', 'on', 'vectorize','eps',1e-6);
 
 N = chebop(domain_x);
 %set left boundary conditions
