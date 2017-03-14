@@ -57,8 +57,8 @@ alphacheb = chebfun(sigma, domain_x,'splitting', 'on');
 betacheb_sdf = -rho-betacheb;
 alphacheb_sdf = -alphacheb;
 
-l.boundary_type = 'reflecting';
-r.boundary_type = 'reflecting';
+l.boundary_type = 'killing';
+r.boundary_type = 'killing';
 m_name ='agg. consumption';
 sh_type ='state space: experts wealth share';
 
