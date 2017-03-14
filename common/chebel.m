@@ -46,7 +46,7 @@ N.op =  @(v) aa1.*diff(v,2)+bb1.*diff(v,1)+cc1.*v;
 %u =  N\1;
 	tic;
 	u0 = chebfun(@(x) 1, domain_x);
-	t = [0 0.001 0.01 0.5 1 1.5 2 2.5 3 4 5 6 7 8 9 10 15 20 25 30 50];
+	t = [0 0.0001 0.01 0.5 1 1.5 2 2.5 3 4 5 6 7 8 9 10 15 20 25 30 50];
 	prefs = cheboppref();
 	prefs.discretization = @chebcolloc2;
     prefs.plotting='on'; 
@@ -72,7 +72,7 @@ N.op =  @(v) aa1.*diff(v,2)+bb1.*diff(v,1)+cc1.*v;
 %end
 	tic;
 	u0 = chebfun(@(x) 1, domain_x);
-	t = [0 0.001 0.01 0.5 1 1.5 2 2.5 3 4 5 6 7 8 9 10 15 20 25 30 50];
+	t = [0 0.0001 0.01 0.5 1 1.5 2 2.5 3 4 5 6 7 8 9 10 15 20 25 30 50];
 	prefs = cheboppref();
 	prefs.discretization = @chebcolloc2;
 	u = expm(N, t, u0, prefs);
@@ -122,7 +122,7 @@ end
 N_sdf.op =  @(v) aa2.*diff(v,2)+bb2.*diff(v,1)+cc2.*v;
 	tic;
 	u0 = chebfun(@(x) 1, domain_x);
-	t = [0 0.001 0.01 0.5 1 1.5 2 2.5 3 4 5 6 7 8 9 10 15 20 25 30 50];
+	t = [0 0.0001 0.01 0.5 1 1.5 2 2.5 3 4 5 6 7 8 9 10 15 20 25 30 50];
 	prefs = cheboppref();
 	prefs.discretization = @chebcolloc2;
 	u = expm(N_sdf, t, u0, prefs);
@@ -144,7 +144,7 @@ N_sdf.op =  @(v) aa2.*diff(v,2)+bb2.*diff(v,1)+cc2.*v;
 	
 	tic;
 	u0 = chebfun(@(x) 1, domain_x);
-	t = [0 0.001 0.01 0.5 1 1.5 2 2.5 3 4 5 6 7 8 9 10 15 20 25 30 50];
+	t = [0 0.0001 0.01 0.5 1 1.5 2 2.5 3 4 5 6 7 8 9 10 15 20 25 30 50];
 	prefs = cheboppref();
 	prefs.discretization = @chebcolloc2;
 	u = expm(N_sdf, t, u0, prefs);
