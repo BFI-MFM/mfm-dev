@@ -8,7 +8,6 @@ function [sh_el, sh_el2, pr_el, pr_el2] = chebel(model_name)
 load(model_name);
 disp(model_name);
 
-chebfunpref.setDefaults('chebfuneps',1e-3);
 aa1 = chebfun(@(x) feval(1/2.*sigmacheb.^2,x), domain_x, 'splitting', 'on', 'vectorize');
 bb1 = chebfun(@(x) feval(mucheb+sigmacheb.*alphacheb,x), domain_x,'splitting', 'on', 'vectorize');
 cc1 = chebfun(@(x) feval(betacheb+alphacheb.^2./2,x), domain_x, 'splitting', 'on', 'vectorize');
