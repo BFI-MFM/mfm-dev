@@ -1,5 +1,5 @@
+%vz: 03/13/2017 to transform BS model outputs into DVD inputs
 load brusan_log.mat;
-
 chebfunpref.setDefaults('chebfuneps',1e-6);
 domain_x = [eta(1) eta(end)];
 ee = eta(netaout);
@@ -16,7 +16,6 @@ rcheb = chebfun({@(x) feval(r1,x),@(x) feval(r2,x)},domain([domain_x(1) eta(neta
 q1 = polyfit(eta(1:netaout), q(1:netaout),46,domain([domain_x(1) eta(netaout)]));
 q2 = polyfit(eta(1+netaout:end), q(1+netaout:end),6,domain([eta(netaout+1) domain_x(end)]));
 qcheb = chebfun({@(x) feval(q1,x),@(x) feval(q2,x)},domain([domain_x(1) eta(netaout) domain_x(end)]));
-
 
 figure(1);
 subplot(1,2,1); hold on
@@ -53,18 +52,14 @@ ylabel('q');
 
 clearvars -except domain_x mucheb sigmacheb rcheb phicheb qcheb delta sigma rho
 
-
 betacheb = chebfun(phicheb -delta -sigma^2/2, domain_x,'splitting', 'on');
 alphacheb = chebfun(sigma, domain_x,'splitting', 'on');
 betacheb_sdf = -rho-betacheb;
 alphacheb_sdf = -alphacheb;
 
-
-l.boundary_type = 'natural';
+l.boundary_type = 'reflectingl';
 r.boundary_type = 'natural';
 m_name ='agg. consumption';
 sh_type ='state space: experts wealth share';
-
-
 
 save('bs2014_log.mat')
