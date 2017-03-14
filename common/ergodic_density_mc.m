@@ -2,6 +2,7 @@ function [ergodic_density,  p_X] = ergodic_density_mc(model_name)
 %computes density for a macro model using Monte-Carlo simulations
 %input: model name
 %output: ergodic density and bins
+
 load (model_name);
 
 d = [domain_x(1), domain_x(2)];
