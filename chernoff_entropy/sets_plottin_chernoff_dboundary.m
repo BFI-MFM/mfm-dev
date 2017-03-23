@@ -1,7 +1,6 @@
 clear all; close all;
 LW = 'linewidth'; MS = 'markersize'; FS = 'fontsize';
 
-set_path_tensor
 
 load hl_theta_alpha_z_960_80.mat
 hfun1_80 = hfun1;

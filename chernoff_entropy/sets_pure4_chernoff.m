@@ -1,5 +1,4 @@
 clear all; close all;
-%set_path_tensor
 %pc=parcluster('local');
 %matlabpool(pc, 12);
 mu_y = 0.386;

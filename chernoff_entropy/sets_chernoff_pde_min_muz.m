@@ -14,7 +14,6 @@ end
 
 LW = 'linewidth'; MS = 'markersize'; FS = 'fontsize';
 
-set_path_tensor
 
   load muz_chernoff_set_960.mat;
   ff = squeeze(ff)';

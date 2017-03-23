@@ -1,5 +1,4 @@
 clear all;close all;
-set_path_tensor
 FS = 'fontsize';
 load hl_theta_beta_960_hl-60-1
 

@@ -1,6 +1,5 @@
 clear all; close all;
 tic;
-set_path_tensor
 % setup parameters
 %mu_y = .0386;
 mu_y = 3.86;

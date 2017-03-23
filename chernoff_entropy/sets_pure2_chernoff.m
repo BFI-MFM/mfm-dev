@@ -1,5 +1,4 @@
 clear all; close all;
-set_path_tensor
 
 % create a local cluster object
 pc = parcluster('local');

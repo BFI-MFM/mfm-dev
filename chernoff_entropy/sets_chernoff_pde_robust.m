@@ -1,6 +1,5 @@
 clear all; close all;
 tic;
-set_path_tensor
 %load sets_density_new.mat
 % setup parameters
 %mu_y = .0386;

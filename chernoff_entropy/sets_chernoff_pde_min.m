@@ -14,7 +14,6 @@ end
 
 LW = 'linewidth'; MS = 'markersize'; FS = 'fontsize';
 
-set_path_tensor
 % load kappa_chernoff_set_120.mat;
 % ff = squeeze(ff)';
 % zz(ff==max(ff))=[];

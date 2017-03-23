@@ -13,7 +13,6 @@ else
     display('working in SERIAL mode');
 end
 
-%set_path_tensor
 tic;
 mu_y_hat = 0.386;
 mu_z_hat = 0;

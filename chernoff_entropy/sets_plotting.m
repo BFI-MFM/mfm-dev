@@ -1,5 +1,4 @@
 clear all;close all;
-set_path_tensor
 load '/home/vzhorin/mfm/sets/sets-theta-20_new.mat'
 
 v_20 = v;

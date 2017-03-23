@@ -11,7 +11,6 @@ clear all; close all;
  %     display('working in SERIAL mode');
  % end
 LW = 'linewidth'; MS = 'markersize'; FS = 'fontsize';
-set_path_tensor
 load beta_chernoff_set_960.mat;
 
 mu_y_hat = 0.386;

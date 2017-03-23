@@ -1,5 +1,4 @@
 clear all; close all;
-set_path_tensor
 
 pc = parcluster('local');
 pc.JobStorageLocation =  strcat('/home/vzhorin/', getenv('SLURM_JOB_ID'));

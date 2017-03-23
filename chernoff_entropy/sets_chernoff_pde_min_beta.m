@@ -14,7 +14,6 @@ end
 
 LW = 'linewidth'; MS = 'markersize'; FS = 'fontsize';
 
-set_path_tensor
 % load beta_chernoff_set_120.mat;
 % ff = squeeze(ff)';
 % zz(ff==min(ff))=[];

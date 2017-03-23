@@ -1,5 +1,4 @@
 clear all;close all;
-set_path_tensor
 %load '/home/vzhorin/new_ss/sets_density-theta-xi-all2-2-1.mat'
 load '/home/vzhorin/new_ss/sets_density-theta-xi-second_spec-1-1.mat'
 v_20 = v;
