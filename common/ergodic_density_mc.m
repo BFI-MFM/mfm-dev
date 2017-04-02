@@ -28,6 +28,10 @@ for t = 2 : T
         %Neumann - natural
         Xtemp(Xtemp<d(1)) = d(1);
         X(:,t) = Xtemp;
+    elseif strcmp(r.boundary_type, 'killing')
+        Xtemp(Xtemp<d(1)) = d(1);
+        X(:,t) = Xtemp;
+   
     elseif strcmp(l.boundary_type, 'reflecting')
         Xtemp(Xtemp<d(1)) = 2*d(1) - Xtemp(Xtemp<d(1));
         X(:,t) = Xtemp;
@@ -37,6 +41,9 @@ for t = 2 : T
     if strcmp(r.boundary_type,'natural')
         %Neumann - natural
         Xtemp(Xtemp>d(2)) = d(2);
+        X(:,t) = Xtemp;
+    elseif strcmp(r.boundary_type, 'killing')
+        Xtemp(Xtemp>d(2)) = 2*d(2) -  Xtemp(Xtemp>d(2)); 
         X(:,t) = Xtemp;
     elseif strcmp(r.boundary_type, 'reflecting')
          Xtemp(Xtemp>d(2)) = 2*d(2) -  Xtemp(Xtemp>d(2)) ;

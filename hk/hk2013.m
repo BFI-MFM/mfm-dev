@@ -2,13 +2,15 @@ load baselinesolution.mat;
 
 chebfunpref.setDefaults('chebfuneps',1e-6);
 domain_x = [0.00001, 1];
-mucheb = polyfit((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),miux(2:totallength-x),57,domain(domain_x));
-sigmacheb = polyfit((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),sigmax(2:totallength-x),57,domain(domain_x));
-price_dividend = polyfit((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),F(2:totallength-x),57,domain(domain_x));
+mucheb = polyfit((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),miux(2:totallength-x),17,domain(domain_x));
+sigmacheb = polyfit((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),sigmax(2:totallength-x),17,domain(domain_x));
+price_dividend = polyfit((F(2:totallength-x)-y(2:totallength-x))./F(2:totallength-x),F(2:totallength-x),17,domain(domain_x));
 
 xfun = chebfun(@(x) x,domain_x);
 w =  1+l-rho*(1-xfun).*price_dividend;
-xi =  -rho*(diff(price_dividend,1).*(1-xfun)-price_dividend)./w;
+%for log function
+xi=rho.*price_dividend./w;
+%xi =  -rho*(diff(price_dividend,1).*(1-xfun)-price_dividend)./w;
 clearvars -except domain_x mucheb sigmacheb xi g sigma rho gama
 
 betacheb = chebfun(mucheb.*xi+g -sigma^2/2, domain_x, 'splitting', 'on'); 
