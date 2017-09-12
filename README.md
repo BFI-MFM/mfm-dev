@@ -13,6 +13,6 @@ set_path_mfm
 ```
 This will set up the environment for you.
 
-##Running models
+## Running models
 
-Currently, we have models from Brunnermeier & Sannikov (2014) and He & Krishnamurthy (2013) available. 
+Currently, we have models from Brunnermeier & Sannikov (2014) and He & Krishnamurthy (2013) available.
