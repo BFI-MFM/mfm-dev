@@ -1,4 +1,4 @@
-# MFM community development code
+# MFM Model Repository
 
 Download and install the latest version of MFM development libraries from Github using the following git command from the command line:
 
