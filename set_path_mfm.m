@@ -14,4 +14,5 @@ addpath( fullfile(root_folder, 'TT-Toolbox/misc'));
 addpath( fullfile(root_folder, 'TT-Toolbox//fmex'));
 addpath( fullfile(root_folder, 'TT-Toolbox/tests'));
 addpath( fullfile(root_folder, 'TT-Toolbox//tt_regression'));
+addpath( fullfile(root_folder, 'shockElas'));
 addpath( fullfile(root_folder, 'sglib'));
