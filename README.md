@@ -1,6 +1,6 @@
 # MFM Model Repository
 
-The MFM Model Repository is an ongoing project that aims to assess and include models and framework in the macro-financial literature. It also evaluates numerical and computational methods that are essential in solving models.
+The MFM Model Repository is an ongoing project that aims to assess and include models and frameworks in the macro-financial literature. It also evaluates numerical and computational methods that are essential in solving models.
 
 To download and install the latest version, use the follow command line:
 
@@ -28,7 +28,7 @@ Currently, we have a few models available (Brunnermeier & Sannikov (2014), He & 
 
 ### Brunnermeier and Sannikov (2014)
 
-The model is based on *A Macroeconomic Model with a Financial Sector*. A more detailed instruction file is in the [model folder](/tree/master/brusan). To compute the equilibrium, run
+The model is based on *A Macroeconomic Model with a Financial Sector*. A more detailed instruction file is in the [model folder](/brusan). To compute the equilibrium, run
 ```matlab
 solve_equilibrium
 ```
@@ -42,7 +42,7 @@ You can customize the model parameters. Please read the detailed instructions in
 
 ## Tools and Numerical Methods
 
-As of now we have developed tools to compute shock elasticities based on the work by Borovicka and Hansen (2012) and the mumerical method to compute Chernoff entropy in Hansen and Sargent (2012). We will use shock elasticities as an example.
+As of now we have developed tools to compute shock elasticities based on the work by Borovicka and Hansen (2012) and the numerical method to compute Chernoff entropy in Hansen and Sargent (2012). We will use shock elasticities as an example.
 
 ### Shock Elasticities
 
@@ -53,3 +53,5 @@ demo_BS2014_SEimfd1
 ```
 
 It uses the model by Brunnermeier & Sannikov (2014) as an example and computes the shock elasticities and other auxiliary outputs (stationary density, etc.)
+
+The toolbox is versatile and contains many useful functions. For more information, look at the PDF guide.
