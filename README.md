@@ -24,7 +24,7 @@ This will set up the environment for you.
 
 ## Models
 
-Currently, we have a few models available (Brunnermeier & Sannikov (2014), He & Krishnamurthy (2013), Brock & Mirman (1972), and Klimenko, Pfeil, Rochet, & Nicolo (2016)). As an example, we will show how you can run Brunnermei and Sannikov (2014).
+Currently, we have a few models available ([Brunnermeier & Sannikov (2014)](/brusan), [He & Krishnamurthy (2013)](/hk), [Brock & Mirman (1972)](/brock_mirman), and [Klimenko, Pfeil, Rochet, & Nicolo (2016)](/rochet)). As an example, we will show how you can run Brunnermei and Sannikov (2014).
 
 ### Brunnermeier and Sannikov (2014)
 
@@ -54,4 +54,10 @@ demo_BS2014_SEimfd1
 
 It uses the model by Brunnermeier & Sannikov (2014) as an example and computes the shock elasticities and other auxiliary outputs (stationary density, etc.)
 
-The toolbox is versatile and contains many useful functions. For more information, look at the PDF guide.
+The toolbox is versatile and contains many useful functions. For more information, look at the [PDF guide](/shockElas/main.pdf).
+
+## To Do List
+
+The MFM team is very active in assessing models and developing code based on the macro-financial literature. In the near future, we aim to add
+* More macro-financial models in different languages
+* High performance computing tools for solving models
