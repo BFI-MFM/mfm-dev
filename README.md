@@ -59,5 +59,7 @@ The toolbox is versatile and contains many useful functions. For more informatio
 ## To Do List
 
 The MFM team is very active in assessing models and developing code based on the macro-financial literature. In the near future, we aim to add
-* More macro-financial models in different languages
+* More macro-financial models in different programming languages
+* A model comparison framework to diagnose and assess model strengths and weaknesses
+* Tools to measure uncertainty and risk in models
 * High performance computing tools for solving models
