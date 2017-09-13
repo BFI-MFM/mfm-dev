@@ -25,8 +25,8 @@ solve_equilibrium
 ```
 The model will generate two figures:
 
-⋅⋅* Figure 1: shows important equilibrium quantities such as q, $\psi$, and drift and volatility of $\eta$.
+* Figure 1: shows important equilibrium quantities such as q, \psi, and drift and volatility of \eta.
 
-⋅⋅* Figure 2: shows expert and household utility within the model.
+* Figure 2: shows expert and household utility within the model.
 
 You can customize the model parameters. Please read the detailed instructions in the model folder.
